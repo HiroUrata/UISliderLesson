@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var yPointSliderItem: UISlider!
     @IBOutlet weak var xPointLabel: UILabel!
     @IBOutlet weak var yPointLabel: UILabel!
-    @IBOutlet weak var viewHiddenSwitch: UISwitch!
+    @IBOutlet weak var resetSwitch: UISwitch!
     
     
     var xSliderValue = Float()
@@ -65,17 +65,22 @@ class ViewController: UIViewController {
         
     }
     
-    @IBAction func viewHidden(_ sender: UISwitch) {
+    @IBAction func xPointYPointReset(_ sender: Any) {
         
-        if sender.isOn == false{
+        if resetSwitch.isOn == false{
             
-            onMovingImageView.isHidden = true
+            moveImage.frame = CGRect(x: onMovingImageView.bounds.minX, y: onMovingImageView.bounds.minY, width: onMovingImageView.frame.size.width / 5, height: onMovingImageView.frame.size.height / 10)
             
-        }else if sender.isOn == true{
+            xPointSliderItem.value = Float(onMovingImageView.bounds.minX)
+            yPointSliderItem.value = Float(onMovingImageView.bounds.minY)
             
-            onMovingImageView.isHidden = false
+            xPointLabel.text = String(Float(onMovingImageView.bounds.minX))
+            yPointLabel.text = String(Float(onMovingImageView.bounds.minY))
             
+            xSliderValue = Float(onMovingImageView.bounds.minX)
+            ySliderValue = Float(onMovingImageView.bounds.minY)
         }
+        
     }
+    
 }
-

@@ -65,7 +65,7 @@
                                 <rect key="frame" x="184" y="649" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <action selector="viewHidden:" destination="BYZ-38-t0r" eventType="valueChanged" id="3Qg-7Q-IX7"/>
+                                    <action selector="xPointYPointReset:" destination="BYZ-38-t0r" eventType="valueChanged" id="aAi-GV-Tx1"/>
                                 </connections>
                             </switch>
                         </subviews>
@@ -75,7 +75,7 @@
                     <connections>
                         <outlet property="moveImage" destination="9Fd-iU-AEn" id="cYi-vX-gsg"/>
                         <outlet property="onMovingImageView" destination="MTd-6U-N8V" id="pjv-mz-mYz"/>
-                        <outlet property="viewHiddenSwitch" destination="ReY-W5-JP8" id="kwE-v3-FNZ"/>
+                        <outlet property="resetSwitch" destination="ReY-W5-JP8" id="lS6-Eb-vH7"/>
                         <outlet property="xPointLabel" destination="MNC-xP-aP8" id="JMo-cz-Stk"/>
                         <outlet property="xPointSliderItem" destination="f3O-bR-jmG" id="Egs-TJ-Kex"/>
                         <outlet property="yPointLabel" destination="VLb-JZ-e8t" id="JV1-Af-aMw"/>
