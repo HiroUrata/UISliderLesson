@@ -34,10 +34,16 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        onMovingImageView.layer.cornerRadius = 15.0
         onMovingImageView.frame = CGRect(x:UIScreen.main.bounds.minX + 20, y: UIScreen.main.bounds.minY + 44, width: UIScreen.main.bounds.width - 40, height: UIScreen.main.bounds.height / 1.6)
         
         moveImage.frame = CGRect(x: onMovingImageView.bounds.minX, y: onMovingImageView.bounds.minY, width: onMovingImageView.frame.size.width / 5, height: onMovingImageView.frame.size.height / 10)
-        
+        moveImage.layer.cornerRadius = 15.0
+        moveImage.layer.shadowOffset = CGSize(width: 7, height: 7)
+        moveImage.layer.shadowOpacity = 0.5
+        moveImage.layer.shadowRadius = 7
+        moveImage.layer.masksToBounds = false
+                
         xPointSliderItem.minimumValue = Float(onMovingImageView.bounds.minX)
         xPointSliderItem.maximumValue = Float(onMovingImageView.bounds.maxX) - Float(moveImage.frame.size.width)
         yPointSliderItem.minimumValue = Float(onMovingImageView.bounds.minY)
